@@ -1,6 +1,15 @@
 #!/bin/bash
 
-../scripts/build_tensor.py csvs/1102.csv.gz csvs/1103.csv.gz out.tns \
+csv_path="/scratch/jli458/BIGTENSORS/BreastCancer/"
+#csv_path="/scratch/jli458/BIGTENSORS/FROSTT/tensor_parser/BreastCancer/csvs/"
+
+../scripts/build_tensor.py ${csv_path}/merged2.csv.gz breastcancer.tns \
 	-f "post_author_id" --type="post_author_id",int \
 	-f "post_id" --type="post_id",int \
 	-f "post_time" --type="post_time",float
+
+# Failed for tar.gz now
+# ../scripts/build_tensor.py csvs.tar.gz out.tns \
+# 	-f "post_author_id" --type="post_author_id",int \
+# 	-f "post_id" --type="post_id",int \
+# 	-f "post_time" --type="post_time",float
