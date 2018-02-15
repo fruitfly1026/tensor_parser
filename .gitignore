@@ -1,5 +1,6 @@
-# Example CSVs
-example_csvs/
+#output data
+.tns
+.map
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
