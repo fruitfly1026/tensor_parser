@@ -5,8 +5,8 @@ from datetime import datetime
 
 # in_gz_file = "../example_data/example_csvs/converted_1103.csv.gz"
 # out_gz_file = "../example_data/example_csvs/shrinked_1103.csv.gz"
-in_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/converted/converted_merged1.csv.gz"
-out_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/converted/shrinked_merged1.csv.gz"
+in_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/converted/converted_merged4.csv.gz"
+out_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/converted/shrinked_merged4.csv.gz"
 
 last_post_thread_id = 0
 last_post_author_id = 0
