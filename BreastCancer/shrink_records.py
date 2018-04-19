@@ -19,12 +19,17 @@ with gzip.open(out_gz_file, 'wb') as fo:
 			# print(line.decode('utf8'))
 			words = line.decode('utf8').split(",")
 			if words[0] != "post_thread_id":
+				# different words in the same post 
 				if words[0] != last_post_thread_id or words[1] != last_post_author_id or words[2] != last_post_id or words[3] != last_post_time:
-					fo.write(line)
 					last_post_thread_id = words[0]
 					last_post_author_id = words[1]
 					last_post_id = words[2]
 					last_post_time = words[3]
+					# Convert seconds to minutes
+					words[3] = str(int(float(words[3]) / 60.0))
+					write_out = words[0]+','+words[1]+','+words[2]+','+words[3]+'\n'
+					fo.write(write_out.encode('utf8'))
 			else:
-				fo.write(line)			
+				write_out = words[0]+','+words[1]+','+words[2]+','+words[3]+'\n'
+				fo.write(write_out.encode('utf8'))		
 		
