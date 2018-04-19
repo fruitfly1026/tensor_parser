@@ -3,10 +3,10 @@
 import gzip
 from datetime import datetime
 
-# in_gz_file = "../example_csvs/test.csv.gz"
-# out_gz_file = "../example_csvs/converted_test.csv.gz"
-in_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/merged3.csv.gz"
-out_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/converted_merged3.csv.gz"
+in_gz_file = "../example_data/example_csvs/1103.csv.gz"
+out_gz_file = "../example_data/example_csvs/converted_1103.csv.gz"
+# in_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/merged4.csv.gz"
+# out_gz_file = "/scratch/jli458/BIGTENSORS/BreastCancer/converted_merged4.csv.gz"
 
 with gzip.open(out_gz_file, 'wb') as fo:
 	with gzip.open(in_gz_file, 'rb') as fi:
