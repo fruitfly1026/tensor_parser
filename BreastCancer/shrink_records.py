@@ -26,7 +26,11 @@ with gzip.open(out_gz_file, 'wb') as fo:
 					last_post_id = words[2]
 					last_post_time = words[3]
 					# Convert seconds to minutes
-					words[3] = str(int(float(words[3]) / 60.0))
+					# words[3] = str(int(float(words[3]) / 60.0))
+					# Convert seconds to hours
+					# words[3] = str(int(float(words[3]) / 60.0 / 60.0))
+					# Convert seconds to days
+					words[3] = str(int(float(words[3]) / 60.0 / 60.0 / 24.0))
 					write_out = words[0]+','+words[1]+','+words[2]+','+words[3]+'\n'
 					fo.write(write_out.encode('utf8'))
 			else:
